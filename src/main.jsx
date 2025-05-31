@@ -1,0 +1,58 @@
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './index.css'
+import App from './App.jsx'
+import Checkout from './pages/Checkout/Checkout.jsx'
+import PaymentMethod from './pages/Checkout/PaymentMethod/PaymentMethod.jsx'
+import QR from './pages/Checkout/QR/QR.jsx'
+import Card from './pages/Checkout/Card/Card.jsx'
+import Pago from './pages/Checkout/Pago/Pago.jsx'
+import Carrito from './pages/Carrito/Carrito.jsx'
+import ResultadoBusqueda from './components/ResultadoBusqueda/ResultadoBusqueda.jsx'
+import DetalleProducto from './components/DetalleProducto/DetalleProducto.jsx'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />
+  },
+  {
+    path: "/resultadoBusqueda",
+    element: <ResultadoBusqueda />
+  },
+  {
+    path: "/detalleProducto",
+    element: <DetalleProducto />
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />
+  },
+  {
+    path: "/checkout/payment",
+    element: <PaymentMethod />
+  },
+  {
+    path: "/checkout/qr",
+    element: <QR />
+  },
+  {
+    path: "/checkout/card",
+    element: <Card />
+  },
+  {
+    path: "/checkout/pago",
+    element: <Pago />
+  },
+  {
+    path: "/carrito",
+    element: <Carrito />
+  }
+])
+
+createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)

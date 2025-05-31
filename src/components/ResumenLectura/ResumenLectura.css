@@ -1,0 +1,73 @@
+.resumenCompra {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.resumenCompra h3 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    padding: 0;
+}
+
+.resumenCompra p {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.4;
+    padding: 0;
+}
+
+.resumenCompra .gratis {
+    color: #2ea44f;
+    font-weight: 600;
+}
+
+.resumenCompra .descuento {
+    color: #fe624c;
+    font-weight: 600;
+}
+
+.resumenCompra .total {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.resumenCompra hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.btnContinuar {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #fe624c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btnContinuar:hover {
+    background-color: #e54d37;
+}

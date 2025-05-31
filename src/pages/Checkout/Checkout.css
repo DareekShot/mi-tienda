@@ -1,0 +1,278 @@
+.main-content {
+    display: flex;
+    min-height: 100vh;
+    margin-top: -20px;
+}
+
+.contenedorCheckout {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.tituloPrincipal {
+    margin: 0;
+    padding-top: 5px;
+}
+
+.tituloPrincipal h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.formularioCheckout {
+    flex: 3;
+    min-width: 650px;
+    padding: 0;
+    width: 100%;
+}
+
+.bloquePaso {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bloquePaso:last-child {
+    margin-bottom: 0;
+}
+
+.bloquePaso h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #333;
+    border-bottom: 2px solid #fe624c;
+    padding-bottom: 4px;
+}
+
+.formEnvio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0;
+    min-width: 0;
+}
+
+.formEnvio label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+.formEnvio input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formEnvio input:focus {
+    border-color: #fe624c;
+    outline: none;
+}
+
+.metodoPago {
+    margin-top: 15px;
+}
+
+.opcionesPago {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.opcionesPago label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.metodoPago input[type="radio"] {
+    accent-color: #fe624c;
+}
+
+.formTarjeta {
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.formQR {
+    border: 1px dashed #fe624c;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff4f0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.imagenQR {
+    width: 160px;
+    margin-top: 10px;
+}
+
+.metodoEnvio {
+    margin-top: 15px;
+}
+
+.metodoEnvio label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.metodoEnvio label:hover {
+    border-color: #fe624c;
+}
+
+.error-text {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+.resumenCompra {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    min-width: 320px;
+    max-width: 350px;
+}
+
+.resumenCompra h3 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.resumenCompra p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.resumenCompra .gratis {
+    color: #2ea44f;
+    font-weight: 600;
+}
+
+.resumenCompra .descuento {
+    color: #fe624c;
+    font-weight: 600;
+}
+
+.resumenCompra .total {
+    font-weight: 600;
+    font-size: 18px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.btnContinuar {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #fe624c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btnContinuar:hover {
+    background-color: #fe735f;
+}
+
+.formEnvio button[type="submit"] {
+    background-color: #fe624c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.formEnvio button[type="submit"]:hover {
+    background-color: #e54d37;
+}
+
+@media (max-width: 1024px) {
+    .contenedorCheckout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formularioCheckout {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .resumenCompra {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .opcionesPago {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

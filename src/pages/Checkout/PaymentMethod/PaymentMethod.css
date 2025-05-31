@@ -1,0 +1,212 @@
+.contenedorCheckout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.formularioCheckout {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 600px;
+}
+
+.formularioScroll {
+  background-color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.bloquePaso {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.tituloPrincipal {
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+.tituloPrincipal h1 {
+  font-size: 2rem;
+  color: #212121;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #fe624c;
+  display: inline-block;
+}
+
+.metodosPago {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.opcionImagen {
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.opcionImagen img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.opcionImagen:hover {
+  border-color: #fe624c;
+  background-color: #fff0ec;
+}
+
+.seleccionada {
+  border-color: #fe624c;
+  background-color: #fff0ec;
+  box-shadow: 0 0 0 3px rgba(254, 98, 76, 0.2);
+}
+
+.resumenCompra {
+  width: 350px;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+} 
+
+.filaMetodo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  min-height: 120px;
+}
+
+.filaMetodo:hover {
+  border-color: #fe624c;
+}
+
+.filaMetodo input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #fe624c;
+  margin: 0;
+}
+
+.textoMetodo {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.seleccionado {
+  border-color: #fe624c;
+  background-color: #fff2ed;
+  box-shadow: 0 0 0 3px rgba(254, 98, 76, 0.2);
+}
+
+.imgQR {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.imgTarjeta {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.payment-method-container {
+    padding: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.payment-method-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    border-color: #007bff;
+}
+
+.payment-option.selected {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.payment-option h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.payment-option p {
+    margin: 0;
+    color: #666;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+    background-color: #0056b3;
+}
+
+.continue-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

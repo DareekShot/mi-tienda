@@ -1,0 +1,118 @@
+.contenedorCheckout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 25px;
+    width: 100%;
+}
+  
+.formularioCheckout {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 650px;
+    width: 100%;
+}
+  
+.tituloPrincipal {
+    margin: 0;
+    padding-top: 15px;
+}
+  
+.tituloPrincipal h1 {
+    font-size: 2rem;
+    color: #212121;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #fe624c;
+    display: inline-block;
+}
+  
+.tarjetaFormularioContainer {
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.imgTarjeta {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+}
+  
+.formTarjeta {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+  
+.campo {
+    margin-bottom: 15px;
+}
+  
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+  
+.campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+  
+.campo input:focus {
+    outline: none;
+    border-color: #fe624c;
+    box-shadow: 0 0 0 2px rgba(254, 98, 76, 0.1);
+}
+  
+.grupoCampos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+  
+.botonContinuar {
+    width: 100%;
+    padding: 12px;
+    background-color: #fe624c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+}
+  
+.botonContinuar:hover {
+    background-color: #e55841;
+}
+  
+.error-text {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+  
