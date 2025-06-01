@@ -16,6 +16,7 @@ import Login from './pages/Login/Login.jsx'
 import Register from './pages/Register/Register.jsx'
 import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
+import OrderDetail from './pages/OrderDetail/OrderDetail.jsx'
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <UserDashboard />
+  },
+  {
+    path: "/orders/:orderId",
+    element: <OrderDetail />
   }
 
 ])
