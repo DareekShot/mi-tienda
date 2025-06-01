@@ -1,0 +1,73 @@
+.orden-container {
+  max-width: 90%;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;            
+  border: 1px solid #ddd;            
+  border-radius: 12px;               
+  padding: 2rem;                     
+}
+
+.orden-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #f2f2f2;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.orden-id {
+  color: #ff5a36;
+}
+
+.estado {
+  color: green;
+  font-weight: bold;
+}
+
+.orden-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.orden-table th,
+.orden-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.id-color {
+  color: #ff5a36;
+  font-weight: bold;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: flex-end; /* pa la derecha */
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.paginacion button, .paginacion span {
+  border: none;
+  background: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.paginacion .active {
+  background-color: #ff5a36;
+  color: white;
+  border-radius: 50%;
+}
+.producto-img-tabla {
+  width: 70px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
