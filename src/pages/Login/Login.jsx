@@ -6,6 +6,7 @@ import './Login.css'
 import '../../components/Header/Header.jsx'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -62,6 +63,7 @@ const Login = () => {
   return (
   <>
     <Header />
+    <Navbar />
     <div className="login-container">
       <h1>Iniciar Sesión</h1>
       <form onSubmit={handleSubmit} className="login-form" noValidate>
