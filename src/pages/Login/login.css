@@ -139,3 +139,21 @@
 .password-toggle:hover {
   color: #000;
 }
+.admin-button {
+  margin-top: 10px;
+  background-color: #f59081;
+  border: none;
+  padding: 14px 0;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #ff5f46;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

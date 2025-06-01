@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import './Login.css' 
+import './Login.css'
 import '../../components/Header/Header.jsx'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
@@ -61,70 +61,77 @@ const Login = () => {
   const canSubmit = email && password && Object.keys(fieldErrors).length === 0
 
   return (
-  <>
-    <Header />
-    <Navbar />
-    <div className="login-container">
-      <h1>Iniciar Sesión</h1>
-      <form onSubmit={handleSubmit} className="login-form" noValidate>
-        <label htmlFor="email">E-mail *</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="usuario@ejemplo.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          autoFocus
-        />
-        {fieldErrors.email && <p className="login-error">{fieldErrors.email}</p>}
-
-        <label htmlFor="password">Contraseña *</label>
-        <div className="password-input-wrapper">
+    <>
+      <Header />
+      <Navbar />
+      <div className="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form onSubmit={handleSubmit} className="login-form" noValidate>
+          <label htmlFor="email">E-mail *</label>
           <input
-            type={showPassword ? 'text' : 'password'}
-            id="password"
-            placeholder="********"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="email"
+            id="email"
+            placeholder="usuario@ejemplo.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoFocus
           />
+          {fieldErrors.email && <p className="login-error">{fieldErrors.email}</p>}
+
+          <label htmlFor="password">Contraseña *</label>
+          <div className="password-input-wrapper">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              id="password"
+              placeholder="********"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            >
+              {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            </button>
+          </div>
+          {fieldErrors.password && (
+            <p className="login-error">{fieldErrors.password}</p>
+          )}
+
+          <div className="forgot-password">
+            <Link to="/password-recovery">¿Olvidaste la contraseña?</Link>
+          </div>
+
+          <button
+            type="submit"
+            className={`login-button ${canSubmit ? 'enabled' : ''}`}
+            disabled={!canSubmit}
+          >
+            Ingresar
+          </button>
           <button
             type="button"
-            className="password-toggle"
-            onClick={() => setShowPassword(!showPassword)}
-            aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            className="login-button admin-button"
+            onClick={() => navigate('/admin-login')}
           >
-            {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            Iniciar como Admin
           </button>
+
+          {generalError && <p className="login-error">{generalError}</p>}
+        </form>
+
+        <div className="register-text">
+          ¿Todavía no tenés cuenta?{' '}
+          <Link to="/register">
+            <strong>Registrate</strong>
+          </Link>
         </div>
-        {fieldErrors.password && (
-          <p className="login-error">{fieldErrors.password}</p>
-        )}
-
-        <div className="forgot-password">
-          <Link to="/password-recovery">¿Olvidaste la contraseña?</Link>
-        </div>
-
-        <button
-          type="submit"
-          className={`login-button ${canSubmit ? 'enabled' : ''}`}
-          disabled={!canSubmit}
-        >
-          Ingresar
-        </button>
-
-        {generalError && <p className="login-error">{generalError}</p>}
-      </form>
-
-      <div className="register-text">
-        ¿Todavía no tenés cuenta?{' '}
-        <Link to="/register">
-          <strong>Registrate</strong>
-        </Link>
       </div>
-    </div>
-    <Footer />
-  </>
-)
+      <Footer />
+    </>
+  )
 }
 
 export default Login
