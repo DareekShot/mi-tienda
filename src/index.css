@@ -72,6 +72,33 @@ body {
   text-align: right;
 }
 
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.navbar-links a {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff5f46;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar-links a:hover {
+  background-color: #e14b37;
+}
+
+
+
 .barra-navegacion {
   background-color: #ff5f46;
   color: white;
