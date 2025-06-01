@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './AddCategory.css';
+import Header from '../../components/Header/Header.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
 const AddCategory = () => {
     //guardar los datos de nombre y descripcion y para inicializar vacio
@@ -12,6 +14,9 @@ const AddCategory = () => {
   };
 
   return (
+    <>
+    <Header />
+    <Navbar />
     <div className="overlay">
       <div className="modal">
         <h2>Nueva categoría</h2>
@@ -37,6 +42,7 @@ const AddCategory = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

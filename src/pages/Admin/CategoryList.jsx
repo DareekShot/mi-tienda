@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './CategoryList.css';
 import { useNavigate } from 'react-router-dom'; // para redirigir a la ruta
-
+import Header from '../../components/Header/Header.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 const CategoryList = () => {
   const navigate = useNavigate();
 
@@ -25,6 +27,9 @@ const CategoryList = () => {
   );
 
   return (
+    <>
+    <Header />
+    <Navbar />
     <div className="categorias-container">
       <h2>Listado de categorías</h2>
       <div className="top-bar">
@@ -75,6 +80,8 @@ const CategoryList = () => {
         <button>{'>'}</button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

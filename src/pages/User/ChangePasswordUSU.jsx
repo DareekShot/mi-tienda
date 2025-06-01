@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './ChangePassword.css';
+import Header from '../../components/Header/Header.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
+
 
 const ChangePassword = () => {
   const [actual, setActual] = useState('');
@@ -16,6 +19,9 @@ const ChangePassword = () => {
   };
 
   return (
+    <> 
+    <Header />
+    <Navbar />
     <div className="overlay">
       <div className="modal">
         <h2>Cambiar contraseña</h2>
@@ -51,6 +57,7 @@ const ChangePassword = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

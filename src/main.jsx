@@ -19,6 +19,13 @@ import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
 import OrderDetail from './pages/UserDashboard/OrderDetail/OrderDetail.jsx'
 import EditProfile from './pages/EditProfile/EditProfile.jsx'
 import ChangePassword from './pages/EditProfile/ChangePassword/ChangePassword.jsx'
+import AddCategory from './pages/Admin/AddCategory.jsx';
+import CategoryList from './pages/Admin/CategoryList.jsx';
+import OrderDetailUSU from './pages/Order/OrderDetailUSU.jsx';
+import EditProfileUSU from './pages/User/EditProfileUSU.jsx';
+import ChangePasswordUSU from './pages/User/ChangePasswordUSU.jsx';
+
+
 
 const router = createBrowserRouter([
   {
@@ -84,7 +91,27 @@ const router = createBrowserRouter([
   {
     path: "/profile/change-password",
     element: <ChangePassword />
-  }
+  },
+  {
+  path: "/admin/categories",
+  element: <CategoryList />
+  },
+  {
+  path: "/admin/categories/add",
+  element: <AddCategory />
+  },
+  {
+  path: "/ordenes-usuario/:id",
+  element: <OrderDetailUSU />
+  },
+  {
+  path: "/usuario/editar-perfil",
+  element: <EditProfileUSU />
+  },
+  {
+  path: "/usuario/cambiar-clave",
+  element: <ChangePasswordUSU />
+  },
 
 ])
 

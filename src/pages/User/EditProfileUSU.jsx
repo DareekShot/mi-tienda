@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './EditProfile.css';
+import Header from '../../components/Header/Header.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
 const EditProfile = () => {
   const [nombre, setNombre] = useState('');
@@ -12,6 +15,9 @@ const EditProfile = () => {
   };
 
   return (
+    <>
+    <Header />
+    <Navbar />
     <div className="overlay">
       <div className="modal">
         <h2>Editar perfil</h2>
@@ -44,6 +50,7 @@ const EditProfile = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

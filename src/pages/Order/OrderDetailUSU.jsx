@@ -1,5 +1,8 @@
 import React from 'react';
 import './OrderDetail.css';
+import Header from '../../components/Header/Header.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import Navbar from '../../components/NavBar/Navbar.jsx'
 
 const OrderDetail = () => {
   const orden = {
@@ -17,6 +20,9 @@ const OrderDetail = () => {
   };
 
   return (
+    <>
+    <Header />
+    <Navbar />
     <div className="orden-container">
       <h2>Detalles de Órden</h2>
       <div className="orden-header">
@@ -63,6 +69,8 @@ const OrderDetail = () => {
         <button>{'>'}</button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
