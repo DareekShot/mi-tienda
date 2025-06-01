@@ -14,6 +14,7 @@ import ResultadoBusqueda from './components/ResultadoBusqueda/ResultadoBusqueda.
 import DetalleProducto from './components/DetalleProducto/DetalleProducto.jsx'
 import Login from './pages/Login/Login.jsx'
 import Register from './pages/Register/Register.jsx'
+import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 
 const router = createBrowserRouter([
   {
@@ -59,7 +60,12 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/password-recovery",
+    element: <PasswordRecovery />
   }
+
 ])
 
 createRoot(document.getElementById('root')).render(
