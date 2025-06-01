@@ -13,6 +13,7 @@ import Carrito from './pages/Carrito/Carrito.jsx'
 import ResultadoBusqueda from './components/ResultadoBusqueda/ResultadoBusqueda.jsx'
 import DetalleProducto from './components/DetalleProducto/DetalleProducto.jsx'
 import Login from './pages/Login/Login.jsx'
+import AdminLogin from './pages/Login/AdminLogin/AdminLogin.jsx'
 import Register from './pages/Register/Register.jsx'
 import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
+  },
+  {
+    path: "/admin-login",
+    element: <AdminLogin />
   },
   {
     path: "/register",

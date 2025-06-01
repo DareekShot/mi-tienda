@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.admin-login-container {
+  max-width: 380px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #e0e0e0;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 95, 70, 0.25);
+}
+
+.admin-login-container h1 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ff5f46;
+  padding-bottom: 10px;
+  width: fit-content;
+  color: #ffffff;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-login-form label {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.admin-login-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 10px 5px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.admin-login-form input:focus {
+  border-bottom: 1px solid #ff5f46;
+}
+
+.admin-login-button {
+  background-color: #e66551;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-top: 25px;
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-login-button.enabled {
+  background-color: #ff5f46;
+}
+
+.admin-login-button:hover {
+  background-color: #ff5f46;
+  box-shadow: 0 4px 8px rgba(255, 95, 70, 0.3);
+}
+
+
+.admin-login-error {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  margin-top: 10px;
+  color: #ff4f4f;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.admin-password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-password-input-wrapper input {
+  flex-grow: 1;
+  padding-right: 35px;
+}
+
+.admin-password-toggle {
+  position: absolute;
+  right: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.admin-password-toggle:hover {
+  color: #ff5f46;
+}
