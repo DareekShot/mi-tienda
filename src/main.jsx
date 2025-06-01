@@ -18,7 +18,7 @@ import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
 import OrderDetail from './pages/OrderDetail/OrderDetail.jsx'
 import EditProfile from './pages/EditProfile/EditProfile.jsx'
-import ChangePassword from './pages/ChangePassword/ChangePassword.jsx'
+import ChangePassword from './pages/EditProfile/ChangePassword/ChangePassword.jsx'
 
 const router = createBrowserRouter([
   {

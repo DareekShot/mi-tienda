@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { useAuth } from '../../contexts/AuthContext'
+import { useAuth } from '../../../contexts/AuthContext.jsx'
 import { useNavigate } from 'react-router-dom'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import './changePassword.css'
-import Header from '../../components/Header/Header.jsx'
-import Footer from '../../components/Footer/Footer.jsx'
-import Navbar from '../../components/NavBar/Navbar.jsx'
+import Header from '../../../components/Header/Header.jsx'
+import Footer from '../../../components/Footer/Footer.jsx'
+import Navbar from '../../../components/NavBar/Navbar.jsx'
 
 const ChangePassword = () => {
   const { user, changePassword, logout } = useAuth()
