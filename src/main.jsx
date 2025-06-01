@@ -17,6 +17,7 @@ import Register from './pages/Register/Register.jsx'
 import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
 import OrderDetail from './pages/OrderDetail/OrderDetail.jsx'
+import EditProfile from './pages/EditProfile/EditProfile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
   {
     path: "/orders/:orderId",
     element: <OrderDetail />
+  },
+  {
+    path: "/profile/edit",
+    element: <EditProfile />
   }
 
 ])

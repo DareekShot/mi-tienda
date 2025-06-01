@@ -1,0 +1,115 @@
+.profile-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #1f2937;
+}
+
+.profile-container h1 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 35px;
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+.profile-form {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 45px;
+  row-gap: 30px;
+}
+
+.profile-form label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #374151;
+  display: block;
+}
+
+.profile-form input,
+.profile-form select {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 2px solid #d1d5db;
+  font-size: 16px;
+  color: #111827;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.profile-form input:focus,
+.profile-form select:focus {
+  border-color: #2563eb;
+}
+
+.profile-form input[disabled],
+.profile-form input[readonly] {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.profile-error {
+  grid-column: span 2;
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.profile-message {
+  grid-column: span 2;
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.profile-button {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  grid-column: span 2;
+  margin-top: 25px;
+  background-color: #000000d8;
+  color: white;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: #000;
+}
+
+/* Para campos que ocupan toda la fila */
+.full-width {
+  grid-column: span 2;
+}
+
+.change-password-link {
+  margin-top: 15px;
+  color: #1e2a42;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  user-select: none;
+  grid-column: span 2; /* para que ocupe toda la fila como el botón */
+}
+.change-password-link:focus {
+  outline: 2px solid #131415;
+  outline-offset: 2px;
+}
+
