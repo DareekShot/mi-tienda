@@ -12,6 +12,7 @@ import Pago from './pages/Checkout/Pago/Pago.jsx'
 import Carrito from './pages/Carrito/Carrito.jsx'
 import ResultadoBusqueda from './components/ResultadoBusqueda/ResultadoBusqueda.jsx'
 import DetalleProducto from './components/DetalleProducto/DetalleProducto.jsx'
+import Login from './pages/Login/Login.jsx'
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/carrito",
     element: <Carrito />
+  },
+  {
+    path: "/login",
+    element: <Login />
   }
 ])
 
