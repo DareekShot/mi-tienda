@@ -15,6 +15,7 @@ import DetalleProducto from './components/DetalleProducto/DetalleProducto.jsx'
 import Login from './pages/Login/Login.jsx'
 import Register from './pages/Register/Register.jsx'
 import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
+import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: "/password-recovery",
     element: <PasswordRecovery />
+  },
+  {
+    path: "/dashboard",
+    element: <UserDashboard />
   }
 
 ])

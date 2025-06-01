@@ -1,0 +1,118 @@
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #1f2937;
+}
+
+.dashboard-container h1 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 14px;
+  text-align: center;
+}
+
+.user-info {
+  margin-bottom: 45px;
+}
+
+.user-info h2 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #374151;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 8px;
+}
+
+.user-data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 40px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.user-data-grid div strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+.orders-section h2 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #374151;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 8px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #374151;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f9fafb;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.details-link {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+.orders-section p {
+  font-size: 16px;
+  color: #6b7280;
+}
+.status-pending {
+  color: #f59e0b; /* amarillo/ámbar */
+  font-weight: 600;
+  background-color: #fef3c7;
+  padding: 0.25rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.status-cancelled {
+  color: #e74c3c;
+  font-weight: 600;
+  background-color: #f9d6d5;
+  padding: 0.25rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.status-shipped {
+  color: #16a085;
+  font-weight: 600;
+  background-color: #d1f0e6;
+  padding: 0.25rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
