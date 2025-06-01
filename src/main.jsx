@@ -18,6 +18,7 @@ import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
 import OrderDetail from './pages/OrderDetail/OrderDetail.jsx'
 import EditProfile from './pages/EditProfile/EditProfile.jsx'
+import ChangePassword from './pages/ChangePassword/ChangePassword.jsx'
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
   {
     path: "/profile/edit",
     element: <EditProfile />
+  },
+  {
+    path: "/profile/change-password",
+    element: <ChangePassword />
   }
 
 ])
