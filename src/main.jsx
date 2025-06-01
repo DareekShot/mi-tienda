@@ -16,7 +16,7 @@ import Login from './pages/Login/Login.jsx'
 import Register from './pages/Register/Register.jsx'
 import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
-import OrderDetail from './pages/OrderDetail/OrderDetail.jsx'
+import OrderDetail from './pages/UserDashboard/OrderDetail/OrderDetail.jsx'
 import EditProfile from './pages/EditProfile/EditProfile.jsx'
 import ChangePassword from './pages/EditProfile/ChangePassword/ChangePassword.jsx'
 

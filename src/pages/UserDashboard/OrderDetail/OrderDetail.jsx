@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useAuth } from '../../contexts/AuthContext'
-import { ordersData } from '../../data/orders'
+import { useAuth } from '../../../contexts/AuthContext.jsx'
+import { ordersData } from '../../../data/orders.js'
 import './orderDetail.css'
-import Header from '../../components/Header/Header.jsx'
-import Footer from '../../components/Footer/Footer.jsx'
-import Navbar from '../../components/NavBar/Navbar.jsx'
+import Header from '../../../components/Header/Header.jsx'
+import Footer from '../../../components/Footer/Footer.jsx'
+import Navbar from '../../../components/NavBar/Navbar.jsx'
 
 const OrderDetail = () =>{
   const { orderId } = useParams()
