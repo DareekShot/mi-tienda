@@ -1,0 +1,111 @@
+.register-container {
+  max-width: 360px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #2e2e2e;
+}
+
+.register-container h1 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+  width: fit-content;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.register-form input {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 8px 0;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input:focus {
+  border-bottom-color: #000;
+}
+
+.register-button {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  background-color: #999;
+  border: none;
+  padding: 14px 0;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.register-button.enabled {
+  background-color: #000;
+}
+
+.register-button:disabled {
+  cursor: not-allowed;
+}
+
+/* Nuevo efecto hover para el botón */
+.register-button:hover {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-error {
+  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  margin-top: 10px;
+  color: #d93025;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.register-links {
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.register-links p{
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.register-links a {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.register-links a:hover {
+  text-decoration: underline;
+}
+
+.dni-note {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0;
+}
