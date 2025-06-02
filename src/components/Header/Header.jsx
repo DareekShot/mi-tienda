@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContext";
 
 const Header = () => {
   const [texto, setTexto] = useState("");
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
-  const { user, logout } = useAuth();
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser);
+  }, []);
 
   const buscar = () => {
     if (texto.trim()) {
@@ -14,7 +18,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    logout();
+    localStorage.removeItem("user");
     navigate("/login");
   };
 
