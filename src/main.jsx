@@ -17,9 +17,6 @@ import AdminLogin from './pages/Login/AdminLogin/AdminLogin.jsx'
 import Register from './pages/Register/Register.jsx'
 import PasswordRecovery from './pages/PasswordRecovery/PasswordRecovery.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
-import OrderDetail from './pages/UserDashboard/OrderDetail/OrderDetail.jsx'
-import EditProfile from './pages/EditProfile/EditProfile.jsx'
-import ChangePassword from './pages/EditProfile/ChangePassword/ChangePassword.jsx'
 import AddCategory from './pages/Admin/AddCategory.jsx';
 import CategoryList from './pages/Admin/CategoryList.jsx';
 import OrderDetailUSU from './pages/Order/OrderDetailUSU.jsx';
@@ -89,18 +86,6 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <UserDashboard />
-  },
-  {
-    path: "/orders/:orderId",
-    element: <OrderDetail />
-  },
-  {
-    path: "/profile/edit",
-    element: <EditProfile />
-  },
-  {
-    path: "/profile/change-password",
-    element: <ChangePassword />
   },
   {
   path: "/admin/categories",
