@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ListaProdu.css';
 
 const orders = [
@@ -9,12 +10,14 @@ const orders = [
 ];
 
 function ListaProdu() {
+  const navigate = useNavigate();
+
   return (
     <div className="order-list">
       <div className='order-list-header'>
       <h4>Listado de ordenes</h4>
       <button onClick={() => onSelectUser && onSelectUser(user)} className='view-products'>Ver Productos</button>
-      <button onClick={() => onSelectUser && onSelectUser(user)} className='view-all-list'>Ver todas las ordenes</button>
+      <button onClick={() => navigate('/orders')} className='view-all-list'>Ver todas las ordenes</button>
       </div>
       
       <table>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../../contexts/AuthContext'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import './AdminLogin.css' 
 import Header from '../../../components/Header/Header.jsx'
@@ -12,7 +13,14 @@ const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [fieldErrors, setFieldErrors] = useState({})
   const [generalError, setGeneralError] = useState('')
+  const { login, user } = useAuth()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (user) {
+      navigate('/admin-dashboard')
+    }
+  }, [user, navigate])
 
   const validate = () => {
     const errs = {}
@@ -37,11 +45,9 @@ const AdminLogin = () => {
     setFieldErrors(validationErrors)
 
     if (Object.keys(validationErrors).length === 0) {
-      const validEmail = 'admin@admin.com'
-      const validPassword = 'admin1234'
-
-      if (email.trim() === validEmail && password === validPassword) {
-        navigate('/admin/Dashboard')
+      const success = login(email.trim(), password)
+      if (success) {
+        navigate('/admin-dashboard')
       } else {
         setGeneralError('Email o contraseña incorrectos.')
       }
@@ -61,7 +67,7 @@ const AdminLogin = () => {
           <input
             type="email"
             id="email"
-            placeholder="admin@admin.com"
+            placeholder="admin@ejemplo.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoFocus

@@ -1,0 +1,49 @@
+.order-details {
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  th {
+    background-color: #f7f7f7;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #eaeaea;
+    background-color: #f7f7f7;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #eaeaea;
+  }
+  
