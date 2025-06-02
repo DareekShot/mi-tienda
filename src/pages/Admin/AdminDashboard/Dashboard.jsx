@@ -1,7 +1,7 @@
 import { useState } from 'react'; 
 import './Dashboard.css';
 import Header from '../../../components/Header/Header';
-import NavBar from '../../../components/NavBar/NavBar';
+import NavBar from '../../../components/NavBar/Navbar';
 import Cards from '../../../components/Cards/Cards';
 import TablaUser from '../../../components/TablaUsuarios/TablaUser';
 import Paginacion from '../../../components/PaginacionAdmin/Paginacion';
