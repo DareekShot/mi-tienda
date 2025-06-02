@@ -1,0 +1,71 @@
+.user-detail {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 28px 32px;
+}
+
+.user-detail h4 {
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.user-detail-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.user-detail-data p {
+  margin: 4px 0;
+}
+
+.active {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.inactive {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.user-detail h5 {
+  margin: 18px 0 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.user-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.user-detail th, .user-detail td {
+  padding: 10px 8px;
+  text-align: left;
+}
+
+.user-detail th {
+  background: #f7f7f7;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+.user-detail tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}

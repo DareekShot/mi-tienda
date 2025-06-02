@@ -1,0 +1,13 @@
+.dashboard {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.seccion-usuario {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+.seccion-ordenes {
+  margin-top: 20px;
+}

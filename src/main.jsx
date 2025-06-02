@@ -25,6 +25,11 @@ import CategoryList from './pages/Admin/CategoryList.jsx';
 import OrderDetailUSU from './pages/Order/OrderDetailUSU.jsx';
 import EditProfileUSU from './pages/User/EditProfileUSU.jsx';
 import ChangePasswordUSU from './pages/User/ChangePasswordUSU.jsx';
+import DashboardAdmin from './pages/Admin/AdminDashboard/Dashboard.jsx'
+import ListaProdu from './components/ListaProductos/ListaProdu.jsx'
+import TablaProdu from './components/ListaProductosAdmin/TablaProdu.jsx'
+import AgregarProdu from './components/AgregarProductoAdmin/AgregarProdu.jsx'
+import Editar from './components/EditarProductoAdmin/Editar.jsx'
 
 
 
@@ -117,6 +122,22 @@ const router = createBrowserRouter([
   path: "/usuario/cambiar-clave",
   element: <ChangePasswordUSU />
   },
+  {
+    path:"/admin/Dashboard",
+    element: <DashboardAdmin />
+  },
+  {
+    path: "/admin/lista-productos",
+    element: <TablaProdu />  
+  },
+  {
+    path: "/admin/lista-productos/agregar-producto",
+    element: <AgregarProdu />
+  },
+  {
+    path: "/admin/lista-productos/editar-producto",
+    element: <Editar />
+  }
 
 ])
 

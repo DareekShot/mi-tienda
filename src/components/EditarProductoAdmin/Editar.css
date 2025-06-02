@@ -1,0 +1,70 @@
+.editar-producto {
+  max-width: 420px;
+  margin: 48px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editar-producto h2 {
+  margin-bottom: 18px;
+  color: #FF624D;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.editar-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #ff624d;
+  outline: none;
+}
+
+.btn-editar {
+  background: #ff624d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-editar:hover {
+  background: #e0553f;
+}

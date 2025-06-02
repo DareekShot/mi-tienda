@@ -1,0 +1,62 @@
+.agregar-producto-form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 24px 28px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.agregar-producto-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.agregar-producto-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+.agregar-producto-form input,
+.agregar-producto-form textarea,
+.agregar-producto-form select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+
+.agregar-producto-form input:focus,
+.agregar-producto-form textarea:focus,
+.agregar-producto-form select:focus {
+  border-color: #ff624d;
+  outline: none;
+}
+
+.agregar-producto-form button[type="submit"] {
+  background: #ff624d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.agregar-producto-form button[type="submit"]:hover {
+  background: #e0553f;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #333;
+  text-align: center;
+}

@@ -1,0 +1,81 @@
+.user-table {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 28px 32px;
+}
+
+.user-table h4 {
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.user-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.user-table th, .user-table td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+.user-table th {
+  background: #f7f7f7;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+.user-table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+
+.active {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.inactive {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.user-table img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.user-table button {
+  background: #ff624d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background 0.2s;
+}
+
+.user-table button:last-child {
+  background: #3498db;
+  margin-right: 0;
+}
+
+.user-table button:hover {
+  opacity: 0.85;
+}
+.user-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

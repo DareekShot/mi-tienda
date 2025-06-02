@@ -1,0 +1,32 @@
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.order-list th,
+.order-list td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.highlight {
+  color: red;
+}
+.delivered {
+  color: green;
+}
+.order-list-header{
+  display: flex;
+}
+.view-all-list{
+  margin-left: auto;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.view-products {
+  margin-left: 1200px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}

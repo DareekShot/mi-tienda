@@ -1,0 +1,43 @@
+.dashboard {
+  font-family: Arial, sans-serif;
+
+  margin: 0 auto; 
+  padding: 5px;
+}
+
+.dashboard h2 {
+  font-weight: 700;
+  
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; 
+  width: 100%;
+}
+
+.card {
+  background-color: #f95738;
+  color: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  flex: 1; 
+  min-width: 150px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card span {
+  font-weight: 400;
+  white-space: nowrap;
+}
