@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../contexts/AuthContext'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import './Login.css'
+import '../../components/Header/Header.jsx'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
-import { usersData } from '../../data/users.js'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -13,10 +14,18 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [fieldErrors, setFieldErrors] = useState({})
   const [generalError, setGeneralError] = useState('')
+  const { login, user } = useAuth()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (user) {
+      navigate('/dashboard')
+    }
+  }, [user, navigate])
 
   const validate = () => {
     const errs = {}
+
     if (!email) {
       errs.email = 'El correo es obligatorio.'
     } else {
@@ -25,9 +34,11 @@ const Login = () => {
         errs.email = 'Por favor ingresa un correo válido.'
       }
     }
+
     if (!password) {
       errs.password = 'La contraseña es obligatoria.'
     }
+
     return errs
   }
 
@@ -38,11 +49,8 @@ const Login = () => {
     setFieldErrors(validationErrors)
 
     if (Object.keys(validationErrors).length === 0) {
-      const user = usersData.find(
-        (u) => u.email === email.trim() && u.password === password
-      )
-      if (user) {
-        localStorage.setItem('user', JSON.stringify(user))
+      const success = login(email.trim(), password)
+      if (success) {
         navigate('/dashboard')
       } else {
         setGeneralError('Email o contraseña incorrectos.')

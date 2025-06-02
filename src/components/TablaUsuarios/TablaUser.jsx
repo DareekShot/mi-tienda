@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./TablaUser.css";
 
 const users = [
@@ -54,11 +55,13 @@ const users = [
 ];
 
 function TablaUser({ onSelectUser, onDeactivateUser }) {
+  const navigate = useNavigate();
+
   return (
     <div className="user-table">
       <div className="user-table-header">
         <h4>Usuarios registrados</h4>
-        <button onClick={() => onSelectUser && onSelectUser(user)}>Ver todos los Usuarios</button>
+        <button onClick={() => navigate('/users')}>Ver todos los Usuarios</button>
       </div>
       
       

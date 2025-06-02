@@ -27,6 +27,10 @@ import ListaProdu from './components/ListaProductos/ListaProdu.jsx'
 import TablaProdu from './components/ListaProductosAdmin/TablaProdu.jsx'
 import AgregarProdu from './components/AgregarProductoAdmin/AgregarProdu.jsx'
 import Editar from './components/EditarProductoAdmin/Editar.jsx'
+import DetalleOrders from './pages/DetalleOrders/DetalleOrders.jsx'
+import UsersList from './pages/UsersList/UsersList.jsx'
+import OrdersList from './pages/OrdersList/OrdersList.jsx'
+import DetalleUser from './pages/DetalleUser/DetalleUser.jsx'
 
 
 
@@ -122,6 +126,22 @@ const router = createBrowserRouter([
   {
     path: "/admin/lista-productos/editar-producto",
     element: <Editar />
+  },
+  {
+    path: "/orders/:orderId/detalle",
+    element: <DetalleOrders />
+  },
+  {
+    path: "/users",
+    element: <UsersList />
+  },
+  {
+    path: "/orders",
+    element: <OrdersList />
+  },
+  {
+    path: "/users/:id",
+    element: <DetalleUser />
   }
 
 ])

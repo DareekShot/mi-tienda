@@ -1,0 +1,50 @@
+.user-details {
+max-width: 800px;
+margin: auto;
+padding: 20px;
+padding-left: 100px;
+padding-right: 100px;
+border: 1px solid #ccc;
+border-radius: 8px;
+background-color: #f9f9f9;
+}
+
+.user-info {
+display: flex;
+align-items: center;
+padding-left: 200px;
+}
+
+.user-image {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+margin-right: 20px;
+}
+
+.orders-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+.orders-table th, .orders-table td {
+border: 1px solid #ccc;
+padding: 10px;
+text-align: left;
+}
+
+.detail-button {
+background-color: #ff6b6b;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 5px 10px;
+cursor: pointer;
+}
+
+.pagination {
+margin-top: 20px;
+text-align: center;
+}
