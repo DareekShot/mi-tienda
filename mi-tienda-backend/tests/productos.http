@@ -1,0 +1,35 @@
+### Obtener todos los productos
+GET http://localhost:3000/api/productos
+
+###
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Coca Cola",
+  "descripcion": "Bebida gaseosa 1L",
+  "precio": 5.50,
+  "tipo": "un",
+  "categoria": "Bebidas",
+  "imagen": "/img/coca.png"
+}
+
+###
+GET http://localhost:3000/api/productos/1
+
+###
+PUT http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Coca Cola Zero",
+  "descripcion": "Bebida sin azúcar",
+  "precio": 6.00,
+  "tipo": "un",
+  "categoria": "Bebidas",
+  "imagen": "/img/cocazero.png"
+}
+
+###
+DELETE http://localhost:3000/api/productos/1
