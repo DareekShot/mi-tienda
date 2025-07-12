@@ -14,8 +14,8 @@ async function main() {
 
         console.log('Base de datos sincronizada actualizada!');
 
-        app.listen(3001, () => {
-            console.log('Servidor escuchando en http://localhost:3001');
+        app.listen(3000, () => {
+            console.log('Servidor escuchando en http://localhost:3000');
         });
 
     } catch (error) {

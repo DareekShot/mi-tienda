@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 
 app.use('/users', usersRouter);
 
-app.listen(3001, () => {
-    console.log('Servidor escuchando en http://localhost:3001');
+app.listen(3000, () => {
+    console.log('Servidor escuchando en http://localhost:3000');
 });
 
 export default app;
