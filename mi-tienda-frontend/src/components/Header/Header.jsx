@@ -4,11 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const [texto, setTexto] = useState("");
   const [user, setUser] = useState(null);
+  const [admin, setAdmin] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     setUser(storedUser);
+    const storedAdmin = JSON.parse(localStorage.getItem("admin"));
+    setAdmin(storedAdmin);
   }, []);
 
   const buscar = () => {
@@ -20,6 +23,11 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem("user");
     navigate("/login");
+  };
+
+  const handleAdminLogout = () => {
+    localStorage.removeItem("admin");
+    navigate("/admin-login");
   };
 
   return (
@@ -47,17 +55,26 @@ const Header = () => {
         </button>
 
         <div className="navbar-links">
-          {user ? (
+          {admin ? (
+            <>
+              <Link to="/admin/Dashboard">Admin Dashboard</Link>
+              <button onClick={handleAdminLogout} className="logout-button">
+                Cerrar sesión admin
+              </button>
+            </>
+          ) : user ? (
             <>
               <Link to="/dashboard">Mi Cuenta</Link>
-              <Link to="/profile/edit">Editar Perfil</Link>
               <button onClick={handleLogout} className="logout-button">
                 Cerrar sesión
               </button>
             </>
           ) : (
-            <Link to="/login">MI CUENTA</Link>
+            <>
+              <Link to="/login">MI CUENTA</Link>
+            </>
           )}
+
         </div>
       </div>
     </header>

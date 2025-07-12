@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import './AdminLogin.css' 
+import './AdminLogin.css'
 import Header from '../../../components/Header/Header.jsx'
 import Footer from '../../../components/Footer/Footer.jsx'
 import Navbar from '../../../components/NavBar/Navbar.jsx'
+import { AdminData } from '../../../data/admin.js'
+
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('')
@@ -36,11 +38,16 @@ const AdminLogin = () => {
     const validationErrors = validate()
     setFieldErrors(validationErrors)
 
-    if (Object.keys(validationErrors).length === 0) {
-      const validEmail = 'admin@admin.com'
-      const validPassword = 'admin1234'
+    // Guarda los errores de validación en localStorage
+    localStorage.setItem('adminValidationErrors', JSON.stringify(validationErrors))
 
-      if (email.trim() === validEmail && password === validPassword) {
+    if (Object.keys(validationErrors).length === 0) {
+      // Busca el admin en el array
+      const admin = AdminData.find(
+        (a) => a.email === email.trim() && a.password === password
+      )
+      if (admin) {
+        localStorage.setItem('admin', JSON.stringify(admin))
         navigate('/admin/Dashboard')
       } else {
         setGeneralError('Email o contraseña incorrectos.')
