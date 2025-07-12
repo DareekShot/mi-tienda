@@ -30,3 +30,32 @@
   border-radius: 4px;
   cursor: pointer;
 }
+/* ListaProdu.css */
+.order-list {
+  padding: 20px;
+}
+
+.order-list-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.delivered {
+  color: green;
+}

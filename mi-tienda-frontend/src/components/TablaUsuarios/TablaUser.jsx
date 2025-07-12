@@ -1,61 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TablaUser.css";
+import api from "../../api/usersApi.js"; // Importa tu API
 
-const users = [
-  { 
-    img: "https://randomuser.me/api/portraits/men/1.jpg",
-    name: 'Juan Perez', 
-    status: 'Activo', 
-    correo: 'asdñljañsd@gmail.com', 
-    fecha: '20/01/2025'
-  },
-  { 
-    img: "https://randomuser.me/api/portraits/women/2.jpg",
-    name: 'María Gonzales', 
-    status: 'Activo', 
-    correo: 'sdñljañsd@gmail.com', 
-    fecha: '20/01/2025' 
-  },
-  { 
-    img: "https://randomuser.me/api/portraits/men/3.jpg",
-    name: 'Marco Aurelio', 
-    status: 'Activo', 
-    correo: 'sdñljañsd@gmail.com', 
-    fecha: '20/01/2025' 
-  },
-  { 
-    img: "https://randomuser.me/api/portraits/women/4.jpg",
-    name: 'Ana Dios', 
-    status: 'Activo', 
-    correo: 'sdñljañsd@gmail.com', 
-    fecha: '20/01/2025' 
-  },
-  { 
-    img: "https://randomuser.me/api/portraits/men/5.jpg",
-    name: 'Carlos Lopez', 
-    status: 'Activo', 
-    correo: 'sdñljañsd@gmail.com', 
-    fecha: '20/01/2025'
-  },
-  { 
-    img: "https://randomuser.me/api/portraits/women/6.jpg",
-    name: 'Laura Mendez', 
-    status: 'Activo', 
-    correo: 'sdñljañsd@gmail.com', 
-    fecha: '20/01/2025'
-  },
-  { 
-    img: "https://randomuser.me/api/portraits/men/7.jpg",
-    name: 'Alejandro Ruiz', 
-    status: 'Inactivo', 
-    correo: 'sdñljañsd@gmail.com', 
-    fecha: '20/01/2025'
-  },
-];
-
-function TablaUser({ onSelectUser, onDeactivateUser }) {
+function TablaUser({ onSelectUser }) {
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    api.findAll().then((data) => {
+      if (Array.isArray(data)) setUsers(data);
+    });
+  }, []);
+
+  // Cambia el estado del usuario en backend y frontend
+  const handleDeactivateUser = async (user) => {
+    const nuevoEstado = user.estado === "activo" ? "inactivo" : "activo";
+    try {
+      await api.update({ ...user, estado: nuevoEstado });
+      setUsers((prevUsers) =>
+        prevUsers.map((u) =>
+          u.id === user.id ? { ...u, estado: nuevoEstado } : u
+        )
+      );
+    } catch (error) {
+      alert("Error al actualizar el estado del usuario");
+    }
+  };
 
   return (
     <div className="user-table">
@@ -63,8 +34,6 @@ function TablaUser({ onSelectUser, onDeactivateUser }) {
         <h4>Usuarios registrados</h4>
         <button onClick={() => navigate('/users')}>Ver todos los Usuarios</button>
       </div>
-      
-      
       <table>
         <thead>
           <tr>
@@ -76,19 +45,28 @@ function TablaUser({ onSelectUser, onDeactivateUser }) {
         </thead>
         <tbody>
           {users.map((user, i) => (
-            <tr key={i}>
-              <td><img 
-              src ={user.img}
-              alt={user.name}
-              /></td>
-              <td>{user.name}</td>
-              <td className={user.status === 'Activo' ? 'active' : 'inactive'}>{user.status}</td>
-              <td><button onClick={() => onDeactivateUser && onDeactivateUser(user)} style={{ marginRight: "8px" }}>
-                  Desactivar
+            <tr key={user.id || i}>
+              <td>
+                <img
+                  src={user.img || "https://randomuser.me/api/portraits/lego/1.jpg"}
+                  alt={user.name}
+                />
+              </td>
+              <td>{user.name} {user.lastname}</td>
+              <td className={user.estado === 'activo' ? 'active' : 'inactive'}>
+                {user.estado === 'activo' ? 'Activo' : 'Inactivo'}
+              </td>
+              <td>
+                <button
+                  onClick={() => handleDeactivateUser(user)}
+                  style={{ marginRight: "8px" }}
+                >
+                  {user.estado === 'activo' ? 'Desactivar' : 'Activar'}
                 </button>
                 <button onClick={() => onSelectUser && onSelectUser(user)}>
                   Ver detalle
-                </button></td>
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

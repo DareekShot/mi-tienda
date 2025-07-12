@@ -37,6 +37,11 @@ const User = sequelize.define("user", {
         type: DataTypes.STRING(8), // Limitar longitud de DNI
         allowNull: true,
     },
+    estado: {
+        type: DataTypes.ENUM('activo', 'inactivo'), // Usar ENUM para estado
+        allowNull: false,
+        defaultValue: 'activo', // Por defecto, el usuario estará activo
+    },
 });
 
 export default User;
