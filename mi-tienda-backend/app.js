@@ -1,8 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-
+import productoRoutes from './routes/productos.js';
 import usersRouter from './routes/users.js';
+import loginRouter from './routes/login.js';
 
 const app = express();
 
@@ -13,10 +14,9 @@ app.get('/', (req, res) => {
     return res.json({message: "Backend funcionando!"});
 });
 
-app.use('/users', usersRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/productos', productoRoutes);
+app.use('/api/login', loginRouter);
 
-app.listen(3000, () => {
-    console.log('Servidor escuchando en http://localhost:3000');
-});
 
 export default app;

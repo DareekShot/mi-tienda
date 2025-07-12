@@ -1,66 +1,13 @@
-const BASE_URL = "http://localhost:3000/api/users";
+import base from './base.js'
 
-export async function obtenerUsuarios() {
-  try {
-    const response = await fetch(BASE_URL);
-    if (!response.ok) throw new Error("Error HTTP: " + response.status);
-    return await response.json();
-  } catch (error) {
-    console.error("Error al obtener usuarios:", error);
-    return [];
-  }
-}
+const endpoint = 'users'
 
-export async function obtenerUsuarioPorId(id) {
-  try {
-    const response = await fetch(`${BASE_URL}/${id}`);
-    if (!response.ok) throw new Error("Error HTTP: " + response.status);
-    return await response.json();
-  } catch (error) {
-    console.error("Error al obtener usuario:", error);
-    return null;
-  }
-}
+const findAll = async () => await base.get(endpoint);
+const create = async (payload) => await base.post(endpoint, payload);
+const update = async (payload) => await base.put(endpoint, payload);
+const remove = async (id) => await base.remove(`${endpoint}/${id}`);
+const findOne = async (id) => await base.get(`${endpoint}/${id}`);
 
-export async function crearUsuario(usuario) {
-  try {
-    const response = await fetch(BASE_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(usuario),
-    });
-    if (!response.ok) throw new Error("Error HTTP: " + response.status);
-    return await response.json();
-  } catch (error) {
-    console.error("Error al crear usuario:", error);
-    return null;
-  }
-}
+const api = { findAll, create, update, remove, findOne}
 
-export async function actualizarUsuario(usuario) {
-  try {
-    const response = await fetch(BASE_URL, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(usuario),
-    });
-    if (!response.ok) throw new Error("Error HTTP: " + response.status);
-    return await response.json();
-  } catch (error) {
-    console.error("Error al actualizar usuario:", error);
-    return null;
-  }
-}
-
-export async function eliminarUsuario(id) {
-  try {
-    const response = await fetch(`${BASE_URL}/${id}`, {
-      method: "DELETE",
-    });
-    if (!response.ok) throw new Error("Error HTTP: " + response.status);
-    return await response.json();
-  } catch (error) {
-    console.error("Error al eliminar usuario:", error);
-    return null;
-  }
-}
+export default api;

@@ -5,7 +5,8 @@ import './Login.css'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import Navbar from '../../components/NavBar/Navbar.jsx'
-import { usersData } from '../../data/users.js'
+import apiLogin from '../../api/login.js'
+//import { usersData } from '../../data/users.js'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -31,24 +32,26 @@ const Login = () => {
     return errs
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setGeneralError('')
-    const validationErrors = validate()
-    setFieldErrors(validationErrors)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setGeneralError('');
+    const validationErrors = validate();
+    setFieldErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      const user = usersData.find(
-        (u) => u.email === email.trim() && u.password === password
-      )
-      if (user) {
-        localStorage.setItem('user', JSON.stringify(user))
-        navigate('/dashboard')
-      } else {
-        setGeneralError('Email o contraseña incorrectos.')
+      try {
+        const user = await apiLogin.login({ email: email.trim(), password });
+        if (user.role !== 'user') {
+          setGeneralError('Email o contraseña incorrectos.');
+          return;
+        }
+        localStorage.setItem('user', JSON.stringify(user));
+        navigate('/dashboard');
+      } catch (error) {
+        setGeneralError(error.message || 'Email o contraseña incorrectos.');
       }
     }
-  }
+  };
 
   const canSubmit = email && password && Object.keys(fieldErrors).length === 0
 

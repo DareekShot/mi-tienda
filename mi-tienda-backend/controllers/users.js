@@ -1,4 +1,4 @@
-import model from '../models/user.js';
+import model from '../models/users.js';
 import RepositoryBase from '../repositories/base.js';
 
 const userRepository = new RepositoryBase(model);

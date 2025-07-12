@@ -5,8 +5,7 @@ import './AdminLogin.css'
 import Header from '../../../components/Header/Header.jsx'
 import Footer from '../../../components/Footer/Footer.jsx'
 import Navbar from '../../../components/NavBar/Navbar.jsx'
-import { AdminData } from '../../../data/admin.js'
-
+import apiLogin from '../../../api/login.js' // Usa tu API REST
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('')
@@ -32,25 +31,25 @@ const AdminLogin = () => {
     return errs
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setGeneralError('')
     const validationErrors = validate()
     setFieldErrors(validationErrors)
 
-    // Guarda los errores de validación en localStorage
     localStorage.setItem('adminValidationErrors', JSON.stringify(validationErrors))
 
     if (Object.keys(validationErrors).length === 0) {
-      // Busca el admin en el array
-      const admin = AdminData.find(
-        (a) => a.email === email.trim() && a.password === password
-      )
-      if (admin) {
+      try {
+        const admin = await apiLogin.login({ email: email.trim(), password })
+        if (admin.role !== 'admin') {
+          setGeneralError('No tienes permisos de administrador.')
+          return
+        }
         localStorage.setItem('admin', JSON.stringify(admin))
-        navigate('/admin/Dashboard')
-      } else {
-        setGeneralError('Email o contraseña incorrectos.')
+        navigate('/admin/dashboard')
+      } catch (error) {
+        setGeneralError(error.message || 'Email o contraseña incorrectos.')
       }
     }
   }

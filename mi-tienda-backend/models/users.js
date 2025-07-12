@@ -1,4 +1,4 @@
-import sequelize from "../config/database";
+import sequelize from "../config/database.js";
 import { DataTypes } from "sequelize";
 
 const User = sequelize.define("user", {
@@ -20,7 +20,7 @@ const User = sequelize.define("user", {
         type: DataTypes.STRING(30), // Limitar longitud de nombre
         allowNull: false,
     },
-    lastName: {
+    lastname: {
         type: DataTypes.STRING(30), // Limitar longitud de apellido
         allowNull: false,
     },
