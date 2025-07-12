@@ -12,7 +12,7 @@ const Orden = sequelize.define("orden", {
     type: DataTypes.INTEGER, // Cambiar a tipo INTEGER para hacer referencia al id del usuario
     allowNull: false, // No puede ser nulo
   },
-  fechaDeOrden: {
+  fechadeorden: {
     type: DataTypes.DATE, // El tipo de dato será una fecha
     allowNull: false, // No puede ser nulo
     defaultValue: DataTypes.NOW, // Por defecto, la fecha será la fecha actual
