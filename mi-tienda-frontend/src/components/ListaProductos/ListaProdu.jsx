@@ -19,8 +19,15 @@ function ListaProdu() {
     <div className="order-list">
       <div className='order-list-header'>
         <h4>Listado de ordenes</h4>
-        {/* Elimina el botón de productos si no lo usas */}
+       
+        <button 
+          onClick={() => navigate('/admin/lista-productos')} 
+          className='view-products'
+        >
+          Ver productos
+        </button>
         <button onClick={() => navigate('/orders')} className='view-all-list'>Ver todas las ordenes</button>
+       
       </div>
       <table>
         <thead>
